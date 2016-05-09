@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>MyVirtual Example</title>
+	</head>
+	<body>
+		<h1>MyVirtual Example</h1>
+		<form name='Virtual Form' action="{{data['URL']}}" method="post">
+			<input name='Mode' type="hidden" value="{{ data['Mode'] }}" /> </br>
+			<input name="txtMerchantID" type="hidden" value="{{ data['MerchantID'] }}" /></br>
+			<input name="txtApplicationID" type="hidden" value="{{  data['ApplicationID'] }}" /></br>
+			<input name="txtMerchantReference" type="hidden" value="{{ data['MerchantReference'] }}" /></br>
+    		<input name="txtRedirectSuccessfulURL" type="hidden" value="{{ data['RedirectSuccess'] }}" /><br />
+    		<input name="txtRedirectFailedURL" type="hidden" value="{{ data['RedirectFailed'] }}" /><br />
+			Amount: R<input name="txtPrice" type="text" value="{{ data['Amount'] }}" /><br />
+			<input name="txtDisplayCurrencyCode" type="hidden" value="{{ data['Currency'] }}" /><br />
+    		<input name="txtCurrencyCode" type="hidden" value="{{ data['Currency'] }}" /><br />
+    		<input name="txtDisplayPrice" type="hidden" value="{{ data['Amount'] }}" /><br />
+    		<input type="submit" name="submit" value="Process Transaction">
+		</form>
+	</body>
+</html>
+

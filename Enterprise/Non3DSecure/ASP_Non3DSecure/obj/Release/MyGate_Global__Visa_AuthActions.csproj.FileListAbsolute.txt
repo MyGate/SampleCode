@@ -1,0 +1,5 @@
+C:\intergrationCode\C#\MyGate_Global__Visa_AuthActions\bin\MyGate_Global__Visa_AuthActions.dll.config
+C:\intergrationCode\C#\MyGate_Global__Visa_AuthActions\bin\MyGate_Global__Visa_AuthActions.dll
+C:\intergrationCode\C#\MyGate_Global__Visa_AuthActions\bin\MyGate_Global__Visa_AuthActions.pdb
+C:\intergrationCode\C#\MyGate_Global__Visa_AuthActions\obj\Release\MyGate_Global__Visa_AuthActions.dll
+C:\intergrationCode\C#\MyGate_Global__Visa_AuthActions\obj\Release\MyGate_Global__Visa_AuthActions.pdb

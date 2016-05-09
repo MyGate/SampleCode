@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2512D71-EAD8-4015-A7DF-E8C00450DA68}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyGate_Global_3D_Secure_Enterprise_Example</RootNamespace>
+    <AssemblyName>MyGate Global 3D-Secure Enterprise Example</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Actions_ccPayment\Action10.xml" />
+    <Content Include="Actions_ccPayment\Action11.xml" />
+    <Content Include="Actions_ccPayment\Action12.xml" />
+    <Content Include="Actions_ccPayment\Action13.xml" />
+    <Content Include="Actions_ccPayment\Action_1.xml" />
+    <Content Include="Actions_ccPayment\Action_2.xml" />
+    <Content Include="Actions_ccPayment\Action_3.xml" />
+    <Content Include="Actions_ccPayment\Action_4.xml" />
+    <Content Include="Actions_ccPayment\Action_5.xml" />
+    <Content Include="Actions_ccPayment\Action_6.xml" />
+    <Content Include="Actions_ccPayment\Action_7.xml" />
+    <Content Include="Actions_ccPayment\Action_8.xml" />
+    <Content Include="Actions_ccPayment\Action_9.xml" />
+    <None Include="Actions_ThreeDSecure\Action14.xml" />
+    <Content Include="Actions_ThreeDSecure\Action15.xml" />
+    <Content Include="ccPayments\ActionThree.aspx" />
+    <Content Include="Errors\ErrorLog\ErrorLog.txt" />
+    <Content Include="Errors\Error\PageEvent.aspx" />
+    <None Include="Service References\Authenticate\configuration91.svcinfo" />
+    <None Include="Service References\Authenticate\configuration.svcinfo" />
+    <Content Include="Service References\Authenticate\MyGate_Global_3D_Secure_Enterprise_Example.Authenticate.responseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Authenticate\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ccPaymentsActionNine\api.wsdl" />
+    <Content Include="Service References\ccPaymentsActionNine\MyGate_Global_3D_Secure_Enterprise_Example.ccPaymentsActionNine.responseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ccPaymentsActionThree\api.wsdl" />
+    <None Include="Service References\ccPaymentsActionNine\configuration91.svcinfo" />
+    <None Include="Service References\ccPaymentsActionNine\configuration.svcinfo" />
+    <None Include="Service References\ccPaymentsActionNine\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ccPaymentsActionThree\MyGate_Global_3D_Secure_Enterprise_Example.ccPaymentsActionThree.responseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ccPayments\configuration91.svcinfo" />
+    <None Include="Service References\ccPayments\configuration.svcinfo" />
+    <None Include="Service References\ccPaymentsActionThree\configuration91.svcinfo" />
+    <None Include="Service References\ccPaymentsActionThree\configuration.svcinfo" />
+    <None Include="Service References\ccPaymentsActionThree\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ccPayments\MyGate_Global_3D_Secure_Enterprise_Example.ccPayments.responseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ccPayments\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="TestCards\TestCards.xml" />
+    <Content Include="ThreeDSecure_14\ThreeDSecure_14.aspx" />
+    <Content Include="Properties\DataSources\System.Xml.XmlElement.datasource" />
+    <None Include="Properties\PublishProfiles\Live.pubxml" />
+    <None Include="Service References\API\configuration91.svcinfo" />
+    <None Include="Service References\API\configuration.svcinfo" />
+    <Content Include="Service References\API\MyGate_Global_3D_Secure_Enterprise_Example.API.responseMessage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\API\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="ThreeDSecure_15\ThreeDSecure_15.aspx" />
+    <Content Include="Response_SubData\UpdateXML.aspx" />
+    <Content Include="Web.config" />
+    <None Include="Service References\Authenticate\api.wsdl" />
+    <None Include="Service References\ccPayments\api.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ccPayments\ActionThree.aspx.cs">
+      <DependentUpon>ActionThree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ccPayments\ActionThree.aspx.designer.cs">
+      <DependentUpon>ActionThree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\Error\PageEvent.aspx.cs">
+      <DependentUpon>PageEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\Error\PageEvent.aspx.designer.cs">
+      <DependentUpon>PageEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Authenticate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ccPaymentsActionNine\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ccPaymentsActionThree\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ccPayments\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ThreeDSecure_14\ThreeDSecure_14.aspx.cs">
+      <DependentUpon>ThreeDSecure_14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThreeDSecure_14\ThreeDSecure_14.aspx.designer.cs">
+      <DependentUpon>ThreeDSecure_14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\API\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ThreeDSecure_15\ThreeDSecure_15.aspx.cs">
+      <DependentUpon>ThreeDSecure_15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThreeDSecure_15\ThreeDSecure_15.aspx.designer.cs">
+      <DependentUpon>ThreeDSecure_15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Response_SubData\UpdateXML.aspx.cs">
+      <DependentUpon>UpdateXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Response_SubData\UpdateXML.aspx.designer.cs">
+      <DependentUpon>UpdateXML.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\API\api.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\API\" />
+    <WCFMetadataStorage Include="Service References\Authenticate\" />
+    <WCFMetadataStorage Include="Service References\ccPaymentsActionNine\" />
+    <WCFMetadataStorage Include="Service References\ccPaymentsActionThree\" />
+    <WCFMetadataStorage Include="Service References\ccPayments\" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>33213</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

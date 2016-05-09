@@ -1,0 +1,23 @@
+﻿<xmlField>
+  <mode>0</mode>
+  <!--Enter MyGate Issued ApplicationUID-->
+  <applicationUID>5A02E47D-7E2E-452B-A940-E3E946265037</applicationUID>
+  <merchantReference>123456789012347</merchantReference>
+  <terminal>Test</terminal>
+  <processorDetails><processorId>478</processorId>
+    <merchantId>mygateTEST</merchantId>
+    <transactionPwd>KeSFRD6BEr</transactionPwd></processorDetails>
+  <cardDetails>
+    <cardHolder>Joe Bloggs</cardHolder>
+    <cardNumber>4000000000000002</cardNumber>
+    <expiryMonth>01</expiryMonth>
+    <expiryYear>2020</expiryYear>
+  </cardDetails>
+  <amount>12.34</amount>
+<browserDetails>
+    <userAgent>Test</userAgent>
+    <browserHeader>Test</browserHeader>
+    <ipAddressv4>196.30.66.11</ipAddressv4>
+</browserDetails>
+</xmlField>
+

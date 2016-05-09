@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://api.mygateglobal.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://api.mygateglobal.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://api.mygateglobal.com/">
+      <xsd:element name="requestMessage" type="xsd:string" />
+      <xsd:complexType name="resMessages">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="code" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="message" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="description" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resFspMessage">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="code" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="message" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="authorizationCode" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="processorResponse" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resMGMessage">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="cardCountry" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="currencyCode" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="eciFlag" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resTdsLookup">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="code" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="message" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="authRequired" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="liabilityShift" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="ccAuthAllowed" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="eciFlag" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="enrolled" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="acsUrl" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="payload" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resTdsAuth">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="code" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="message" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="liabilityShift" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="ccAuthAllowed" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="eciFlag" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="paresStatus" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="signatureVerification" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="xid" type="xsd:string" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="cavv" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resWarning">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="warning" type="tns:resMessages" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="resError">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="error" type="tns:resMessages" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="responseMessage1" type="xsd:string" />
+      <xsd:element name="responseMessage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" name="status" type="xsd:string" />
+            <xsd:element minOccurs="1" name="uidTransactionIndex" type="xsd:string" />
+            <xsd:element minOccurs="1" name="dtRequestReceived" type="xsd:string" />
+            <xsd:element minOccurs="1" name="dtResponseSent" type="xsd:string" />
+            <xsd:element minOccurs="0" name="warnings" type="tns:resWarning" />
+            <xsd:element minOccurs="0" name="errors" type="tns:resError" />
+            <xsd:element minOccurs="0" name="mgMessage" type="tns:resMGMessage" />
+            <xsd:element minOccurs="0" name="fspMessage" type="tns:resFspMessage" />
+            <xsd:element minOccurs="0" name="tdsLookup" type="tns:resTdsLookup" />
+            <xsd:element minOccurs="0" name="tdsAuth" type="tns:resTdsAuth" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestIn">
+    <wsdl:part name="reqParam" element="tns:requestMessage" />
+  </wsdl:message>
+  <wsdl:message name="RequestOut">
+    <wsdl:part name="resParam" element="tns:responseMessage" />
+  </wsdl:message>
+  <wsdl:portType name="APIService">
+    <wsdl:operation name="execRequest">
+      <wsdl:input name="execRequestIn" message="tns:RequestIn" />
+      <wsdl:output name="execRequestOut" message="tns:RequestOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APIService" type="tns:APIService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="execRequest">
+      <soap:operation soapAction="https://api.mygateglobal.com/execRequest" style="document" />
+      <wsdl:input name="execRequestIn">
+        <soap:body use="literal" namespace="https://api.mygateglobal.com/" />
+      </wsdl:input>
+      <wsdl:output name="execRequestOut">
+        <soap:body use="literal" namespace="https://api.mygateglobal.com/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsAPIService">
+    <wsdl:port name="APIPort" binding="tns:APIService">
+      <soap:address location="https://api.mygateglobal.com/api/api.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

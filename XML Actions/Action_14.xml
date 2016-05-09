@@ -1,0 +1,18 @@
+<xmlField>
+	<mode>{mode}</mode>
+	<applicationUID>{applicationUID}</applicationUID>
+	<merchantReference>{merchantReference}</merchantReference>
+	<terminal>Test</terminal>
+	<cardDetails>
+		<cardHolder>{cardHolder}</cardHolder>
+		<cardNumber>{cardNumber}</cardNumber>
+		<expiryMonth>{expiryMonth}</expiryMonth>
+		<expiryYear>{expiryYear}</expiryYear>
+	</cardDetails>
+	<amount>12.34</amount>
+	<browserDetails>
+		<userAgent>Test</userAgent>
+		<browserHeader>Test</browserHeader>
+		<ipAddressv4>196.30.66.11</ipAddressv4>
+	</browserDetails>
+</xmlField>

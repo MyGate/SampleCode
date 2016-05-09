@@ -1,0 +1,9 @@
+<xmlField>
+	<applicationUID>{applicationUID}</applicationUID>
+	<transactionAuth>
+		<transactionIndex>{transactionIndex}</transactionIndex>
+		<paresPayload>{paresPayload}</paresPayload>
+	</transactionAuth>
+	<merchantReference>{merchantReference}</merchantReference>
+	<terminal>Till_21</terminal>
+</xmlField>

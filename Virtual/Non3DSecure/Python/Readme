@@ -1,0 +1,144 @@
+--------------------------------------------------------------------------------
+DOCUMENTATION
+--------------------------------------------------------------------------------
+
+This code sample has been successfully tested on the following server
+configurations and performed according to MyGate's documented My Virtual integration method standards.
+  Python 2.7.1 with Virtual ENV, PIP and Flask on Mac OS X 10.7.4
+
+Last updated April 2012
+
+For complete documentation, please visit the MyGate's developer centre website at:
+http://developer.mygateglobal.com
+
+--------------------------------------------------------------------------------
+DISCLAIMER
+--------------------------------------------------------------------------------
+
+WARNING: ANY USE BY YOU OF THE SAMPLE CODE PROVIDED IS AT YOUR OWN RISK
+
+MyGate provides this code "as is" without warranty of any kind, either
+express or implied, including but not limited to the implied warranties of
+suitability and/or fitness for a particular purpose.
+
+This sample code is provided merely as a blueprint demonstrating one possible
+approach to integrating with MyGate using our My Virtual integration
+Method.
+
+This sample code is not a tutorial.  If you are unfamiliar with specific
+programming functions and concepts, please consult the appropriate reference
+materials.
+
+--------------------------------------------------------------------------------
+PREREQUISITES
+--------------------------------------------------------------------------------
+
+- In order to establish a successful connection to MyGate, it is required
+  that you obtain a valid Merchant ID and Application ID and enter these
+  values into the appropriate places within this sample code.  This is obtained
+  within the MyGate Web Console under My Account tab / Integration Details.  If you do not have
+  a live MyGate account or prefer not to use it for testing, you can obtain
+  a free developer test account by creating an account at http://developer.mygateglobal.com and 
+  going to the sandbox environment.
+
+- This sample code uses an HTTP POST to establish a connection
+  to the MyGate server.
+
+- It is required that you install the flask framework to run this example.
+  To do this, follow the following steps:
+
+  In Terminal, run the following commands:
+
+  1) sudo easy_install virtualenv
+  2) sudo easy_install pip
+  3) sudo pip install Flask
+
+  Once complete, start the app by typing the following command in Terminal once in the app folder:
+
+  1) python app.py
+
+  You should now be able to browse to http://127.0.0.1:5000/Virtual and see the example post to MyGate.
+
+--------------------------------------------------------------------------------
+TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+ERROR: 
+  1003 - An incorrect MerchantID was specified. This will identify the customer
+  account on the MyGate platform. .  Refer to Data Element 2.
+
+RESOLUTION:
+  This error is caused by an incorrect merchantid being used.
+	
+  First, check to see that the correct merchantid has been entered.  You can
+  confirm this from within the MyGate Webconsole under My Account / Integration 
+  details. 
+	
+  Second, the wrong posting URL is being used. For developer accounts, ensure
+  that you are posting to: https://dev-virtual.mygateglobal.com/PaymentPage.cfm
+  For live accounts (even in test mode) ensure that you are posting to:
+  https://virtual.mygateglobal.com/PaymentPage.cfm
+
+ERROR: 
+  1005 - An incorrect Application ID was specified. This will identify the 
+  Application that is linked to the customer account on the MyGate platform.
+  Refer to Data Element 3 
+
+RESOLUTION:
+  This error is caused by an incorrect applicationid being used.
+	
+  First, check to see that the correct applicationid has been entered.  You can
+  confirm this from within the MyGate Webconsole under My Account / Integration 
+  details. 
+	
+  Second, the wrong posting URL is being used. For developer accounts, ensure
+  that you are posting to: https://dev-virtual.mygateglobal.com/PaymentPage.cfm
+  For live accounts (even in test mode) ensure that you are posting to:
+  https://virtual.mygateglobal.com/PaymentPage.cfm	
+
+ERROR:
+  1012 - An incorrect Mode was specified. Please enter Mode "0" for test or
+  Mode "1" for Live.  Refer to Data Element 7
+	
+RESOLUTION:
+  This error indicates that an invalid mode has been submited.
+  
+  If you are testing in the sandbox environment, you can only use mode "0" for
+  testing.  If you are testing in the live environment you can use either mode.
+  Note that only test cards can be used in mode "0".
+  
+  
+DEVELOPER TOOLS:
+  MyGate's developer centre's provides extensive resources and developer tools
+  that help when integrating to MyGate's integration methods. Here are some
+  tools that may help you.
+  
+ RESPONSE CODE MANAGER:
+  Use this tool to identify any error messages generated and also receive 
+  suggested actions to fix the error. In every message request type sent 
+  to the Transaction Pipeline a response message type will be generated by MyGate.
+  http://developer.mygateglobal.com/test-center/response-code-manager-page
+
+ DeBug Mode:
+  MyGate's DeBug Mode tool can be used by developers that are integrating to any of 
+  MyGate's Virtual solutions. MyGate's debug mode tool can be used to validate the 
+  syntax of name/value pairs when submitting a transaction. All of MyGate's Virtual 
+  solutions utilize form posts making this a great tool to see what data is being posted
+
+  In order to use this tool you will be required to post the debug option within 
+  the Virtual API.
+  
+ DOCUMENTATION:
+  Documentation for all of our integration methods can be found on our
+  developer website.  Please review this documentation for additional
+  details on the integration process:
+  http://developer.mygateglobal.com/home-page/choose-an-api-page
+  
+OTHER ERRORS:
+  If all else fails, you can contact our integration support department at:
+  integration@mygateglobal.com
+  
+  Please provide clear details on the error that you are receiving and the
+  steps that you are taking to produce the error.  Also remember that we cannot
+  support individual e-commerce developers with programming problems and other
+  issues that are not directly caused by, or related to, our APIs.

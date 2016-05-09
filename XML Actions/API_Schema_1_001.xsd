@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:simpleType name="amount">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="\d{1,6}\.\d{2}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="authCode">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{6}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="binNumber">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{6}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="bit">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="0|1" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="bool">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="true|false" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="country">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="AD|AE|AF|AG|AI|AL|AM|AN|AO|AQ|AR|AS|AT|AU|AW|AX|AZ|BA|BB|BD|BE|BF|BG|BH|BI|BJ|BL|BM|BN|BO|BR|BS|BT|BV|BW|BY|BZ|CA|CC|CD|CF|CG|CH|CI|CK|CL|CM|CN|CO|CR|CU|CV|CX|CY|CZ|DE|DJ|DK|DM|DO|DZ|EC|EE|EG|EH|ER|ES|ET|FI|FJ|FK|FM|FO|FR|GA|GB|GD|GE|GF|GG|GH|GI|GL|GM|GN|GP|GQ|GR|GS|GT|GU|GW|GY|HK|HM|HN|HR|HT|HU|ID|IE|IL|IM|IN|IO|IQ|IR|IS|IT|JE|JM|JO|JP|KE|KG|KH|KI|KM|KN|KP|KR|KW|KY|KZ|LA|LB|LC|LI|LK|LR|LS|LT|LU|LV|LY|MA|MC|MD|ME|MF|MG|MH|MK|ML|MM|MN|MO|MP|MQ|MR|MS|MT|MU|MV|MW|MX|MY|MZ|NA|NC|NE|NF|NG|NI|NL|NO|NP|NR|NU|NZ|OM|PA|PE|PF|PG|PH|PK|PL|PM|PN|PR|PS|PT|PW|PY|QA|RE|RO|RS|RU|RW|SA|SB|SC|SD|SE|SG|SH|SI|SJ|SK|SL|SM|SN|SO|SR|ST|SV|SY|SZ|TC|TD|TF|TG|TH|TJ|TK|TL|TM|TN|TO|TR|TT|TV|TW|TZ|UA|UG|UM|US|UY|UZ|VA|VC|VE|VG|VI|VN|VU|WF|WS|YE|YT|ZA|ZM|ZW" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="creditcard">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]{13,16}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="cvvNumber">
+		<xsd:restriction base="xsd:string">		
+			<xsd:pattern value="([0-9]{3,4})" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="actions">
+		<xsd:restriction base="xsd:string">		
+			<xsd:pattern value="([0-9]{1})" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="budgetPeriod">
+		<xsd:restriction base="xsd:string">		
+			<xsd:pattern value="00|03|06|12|18|24" />
+		</xsd:restriction>
+	</xsd:simpleType>	
+
+	<xsd:simpleType name="guid">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="ipAddressv4">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern
+				value="((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="ipAddressv6">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="month">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="([1-9])|([0][1-9])|([1][0-2])" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="year">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[2][0-9]{3}" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- string values -->
+	<xsd:simpleType name="emptyString">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="255" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="filledString">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="3" />
+			<xsd:maxLength value="255" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	
+	<xsd:complexType name="salesItemDetails">
+		<xsd:sequence>
+			<xsd:element name="reference" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="description" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="unitPrice" type="amount" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="quantity" type="xsd:decimal" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="totalAmount" type="amount" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="salesItems">
+		<xsd:sequence>
+			<xsd:element name="discountAmount" type="amount" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="shippingAmount" type="amount" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="gratuityAmount" type="amount" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="item" type="salesItemDetails" minOccurs="0" maxOccurs="999" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="businessRules">
+		<xsd:all>
+			<xsd:element name="doFraudValidation" type="bool" minOccurs="0" />
+			<xsd:element name="doAddressVerification" type="bool" minOccurs="0" />
+			<xsd:element name="doCardVerification" type="bool" minOccurs="0" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="addressDetails">
+		<xsd:sequence>
+			<xsd:element name="address1" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="address2" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="address3" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="suburb" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="city" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="state" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="postalCode" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="country" type="country" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="contactDetails">
+		<xsd:all>
+			<xsd:element name="firstName" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="lastName" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="company" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="contactNumber" type="emptyString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="alternativeContactNumber" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="email" type="xsd:string" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="billTo">
+		<xsd:all>
+			<xsd:element name="customerID" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="invoiceID" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="invoiceDescription" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="contact" type="contactDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="address" type="addressDetails" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="shipTo">
+		<xsd:all>
+			<xsd:element name="contact" type="contactDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="address" type="addressDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="shippingMethod" type="emptyString" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="cardDetail">
+		<xsd:all>
+			<xsd:element name="cardHolder" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="cardNumber" type="creditcard" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="expiryMonth" type="month" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="expiryYear" type="year" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="cvvNumber" type="cvvNumber" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="budgetPeriod" type="budgetPeriod" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="cardDetailNoCVV">
+		<xsd:all>
+			<xsd:element name="cardHolder" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="cardNumber" type="creditcard" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="expiryMonth" type="month" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="expiryYear" type="year" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="threeDSecure_Processor">
+		<xsd:all>
+			<xsd:element name="processorId" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="merchantId" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionPwd" type="xsd:string" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="notification">
+		<xsd:all>
+			<xsd:element name="email" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="mobile" type="emptyString" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="authWithPayload">
+		<xsd:all>
+			<xsd:element name="transactionIndex" type="guid" />
+			<xsd:element name="paresPayload" type="xsd:string"/>
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="visaCheckout">
+		<xsd:all>
+			<xsd:element name="action" type="actions" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="payload" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="secretKey" type="xsd:string" minOccurs="0" maxOccurs="1" />			
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="threeDSecure">
+		<xsd:all>
+			<xsd:element name="EciFlag" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Enrolled" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="PAResStatus" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="SignatureVerification" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Xid" type="filledString" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="Cavv" type="filledString" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+
+	
+	<xsd:complexType name="transactionAuth">
+		<xsd:choice minOccurs="1" maxOccurs="1">
+			<xsd:element name="transactionIndex" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="authWithPayload" type="authWithPayload" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="visaCheckout" type="visaCheckout" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="threeDSecure" type="threeDSecure" minOccurs="1" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>	
+
+	<xsd:complexType name="browserDetails">
+		<xsd:all>
+			<xsd:element name="userAgent" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="browserHeader" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ipAddressv4" type="ipAddressv4"  minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ipAddressv6" type="ipAddressv6"  minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="fraudDetails">
+		<xsd:all>
+			<xsd:element name="uci" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="deviceID" type="xsd:string" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="tdsLookup">
+		<xsd:all>
+			<xsd:element name="mode" type="bit" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="merchantReference" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="processorDetails" type="threeDSecure_Processor" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="cardDetails" type="cardDetailNoCVV" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="amount" type="amount" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="billingDetails" type="billTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="browserDetails" type="browserDetails" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="tdsAuth">
+		<xsd:all>
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" type="authWithPayload" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="merchantReference" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="ccAuth">
+		<xsd:all>
+			<xsd:element name="mode" type="bit" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" minOccurs="0" maxOccurs="1" type="transactionAuth"/>
+			<xsd:element name="merchantReference" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="cardDetails" type="cardDetail" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="amount" type="amount" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="billingDetails" type="billTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="shippingDetails" type="shipTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="notification" type="notification" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="salesItems" type="salesItems" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="browserDetails" type="browserDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="fraudDetails" type="fraudDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="businessRules" type="businessRules" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+		
+	</xsd:complexType>
+
+	<xsd:complexType name="ccCapture">
+		<xsd:all>
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" minOccurs="1" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="transactionIndex" type="guid" minOccurs="1" maxOccurs="1" />
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="merchantReference" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="amount" type="amount" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="billingDetails" type="billTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="shippingDetails" type="shipTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="salesItems" type="salesItems" minOccurs="0" maxOccurs="1" />			
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ccCaptureWithAuth">
+		<xsd:all>
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" minOccurs="1" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="transactionIndex" type="guid" minOccurs="1" maxOccurs="1" />
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="verbalAuthCode" type="authCode" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="merchantReference" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="amount" type="amount" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="billingDetails" type="billTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="shippingDetails" type="shipTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="salesItems" type="salesItems" minOccurs="0" maxOccurs="1" />			
+		</xsd:all>
+	</xsd:complexType>	
+
+	<xsd:complexType name="ccAuthReversal">
+		<xsd:all>
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" minOccurs="1" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="transactionIndex" type="guid" minOccurs="1" maxOccurs="1" />
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="merchantReference" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="lostTransaction" type="bit" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="ccCredit">
+		<xsd:all>
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" minOccurs="1" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="transactionIndex" type="guid" minOccurs="1" maxOccurs="1" />
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="merchantReference" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="amount" type="amount" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ccRefund">
+		<xsd:all>
+			<xsd:element name="mode" type="bit" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="merchantReference" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="cardDetails" type="cardDetail" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="amount" type="amount" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="billingDetails" type="billTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="salesItems" type="salesItems" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ccVoid">
+		<xsd:all>
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" minOccurs="1" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:all>
+						<xsd:element name="transactionIndex" type="guid" minOccurs="1" maxOccurs="1" />
+					</xsd:all>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="merchantReference" type="xsd:string" minOccurs="0" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="lostTransaction" type="bit" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	<xsd:complexType name="ccVisaCheckout">
+		<xsd:all>
+			<xsd:element name="mode" type="bit" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="transactionAuth" minOccurs="0" maxOccurs="1" type="transactionAuth"/>
+			<xsd:element name="merchantReference" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="billingDetails" type="billTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="shippingDetails" type="shipTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="notification" type="notification" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="salesItems" type="salesItems" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="browserDetails" type="browserDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="fraudDetails" type="fraudDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="businessRules" type="businessRules" minOccurs="0" maxOccurs="1" />		
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="secFraud">
+		<xsd:all>
+			<xsd:element name="mode" type="bit" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="merchantReference" type="emptyString" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="terminal" type="xsd:string" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="amount" type="amount" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="billingDetails" type="billTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="shippingDetails" type="shipTo" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="notification" type="notification" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="salesItems" type="salesItems" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="browserDetails" type="browserDetails" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="fraudDetails" type="fraudDetails" minOccurs="0" maxOccurs="1" />			
+			<xsd:element name="businessRules" type="businessRules" minOccurs="0" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+	
+	<xsd:complexType name="rptReports">
+		<xsd:all>
+			<xsd:element name="applicationUID" type="guid" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="reportFilter" minOccurs="1" maxOccurs="1">
+				<xsd:complexType>
+					<xsd:choice minOccurs="1" maxOccurs="2">
+						<xsd:element name="transactionIndex" type="guid" minOccurs="0" maxOccurs="1"/>
+						<xsd:element name="merchantReference" type="filledString" minOccurs="0" maxOccurs="1"/>
+					</xsd:choice>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="terminal" type="xsd:string" minOccurs="1" maxOccurs="1" />
+		</xsd:all>
+	</xsd:complexType>
+
+	<xsd:complexType name="reqMessages">
+		<xsd:choice minOccurs="1" maxOccurs="1">
+			<xsd:element name="tdsLookup" type="tdsLookup" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="tdsAuth" type="tdsAuth" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccAuth" type="ccAuth" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccVisaCheckout" type="ccVisaCheckout" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccCapture" type="ccCapture" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccCaptureWithAuth" type="ccCaptureWithAuth" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccSale" type="ccAuth" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccAuthReversal" type="ccAuthReversal" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccCredit" type="ccCredit" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccRefund" type="ccRefund" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="ccVoid" type="ccVoid" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="rptReports" type="rptReports" minOccurs="0" maxOccurs="1" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="resMessages">
+		<xsd:sequence>
+			<xsd:element name="code" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="message" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="description" type="xsd:string" minOccurs="1" maxOccurs="1" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="resWarning">
+		<xsd:sequence>
+			<xsd:element name="warning" type="resMessages" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="resError">
+		<xsd:sequence>
+			<xsd:element name="error" type="resMessages" minOccurs="0" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:element name="requestMessage" type="reqMessages" />
+
+	<xsd:element name="responseMessage">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="status" type="xsd:int" minOccurs="1" />
+				<xsd:element name="uidTransactionIndex" type="xsd:string" minOccurs="1" />
+				<xsd:element name="dtRequestReceived" type="xsd:dateTime" minOccurs="1" />
+				<xsd:element name="dtResponseSent" type="xsd:dateTime" minOccurs="1" />
+				<xsd:element name="errors" type="resError" minOccurs="0" />
+				<xsd:element name="warnings" type="resWarning" minOccurs="0" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

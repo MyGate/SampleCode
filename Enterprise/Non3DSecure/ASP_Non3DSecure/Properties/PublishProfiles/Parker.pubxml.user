@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>http://localhost/Visa/Enterprise/N3DS/ASP</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ASP/Default.aspx">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="ASP/Default.aspx.cs">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="ASP/Default.aspx.designer.cs">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="SubXml/SubXml.aspx">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action10.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action11.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action12.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action13.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_1.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_2.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_3.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_4.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_5.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_6.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_7.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_8.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+    <File Include="XML Actions/Action_9.xml">
+      <publishTime>01/01/1601 02:00:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
