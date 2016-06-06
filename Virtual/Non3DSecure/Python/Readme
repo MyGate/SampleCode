@@ -36,10 +36,7 @@ PREREQUISITES
 - In order to establish a successful connection to MyGate, it is required
   that you obtain a valid Merchant ID and Application ID and enter these
   values into the appropriate places within this sample code.  This is obtained
-  within the MyGate Web Console under My Account tab / Integration Details.  If you do not have
-  a live MyGate account or prefer not to use it for testing, you can obtain
-  a free developer test account by creating an account at http://developer.mygateglobal.com and 
-  going to the sandbox environment.
+  within the MyGate Web Console under My Account tab / Integration Details.  
 
 - This sample code uses an HTTP POST to establish a connection
   to the MyGate server.
