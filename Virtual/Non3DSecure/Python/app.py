@@ -26,6 +26,10 @@ from flask import request
 app = Flask(__name__)
 
 @app.route('/')
+def helloworld():
+    return 'Welcome'
+
+@app.route('/Virtual/')
 
 # Setting variables that get sent to MyGate
 
@@ -36,19 +40,17 @@ def sample():
     #0 = Test Mode. 1 = Live Mode
     data['Mode'] = 0
     
-    #Be sure to populate these variables with the ones you generated in the MyGate Developer Center. Go there now by going to http://developer.mygateglobal.com
+
     data['MerchantID'] = "F5785ECF-1EAE-40A0-9D37-93E2E8A4BAB3"
     data['ApplicationID'] = "1DBBBAAE-958E-4346-A27A-6BB5171CEEDC"
     
-    data['MerchantReference'] = "PythonTest"
+    data['MerchantReference'] = ""
     
     #The authorisation and settlement currency
-    data['Currency'] = 'USD'
-	
+    data['Currency'] = 'ZAR'
     
     #The amount to be processed
-    data['Amount'] = 10.99
-	
+    data['Amount'] = 0.01
     
     #The result pages (Where MyGate returns the card holder to after the transaction)
     data['RedirectSuccess'] = "http://127.0.0.1:5000/processResults/"
@@ -155,7 +157,7 @@ def process_results():
                                            'cardCountry' : cardCountry,
                                            'countryCode' : countryCode,
                                            'currencyCode' : currencyCode,
-										   'transactionIndex' : transactionIndex,
+                                           'transactionIndex' : transactionIndex,
                                            'payMethod' : payMethod,
                                            'merchantReference': merchantReference}
                                    )
