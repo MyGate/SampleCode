@@ -1,4 +1,4 @@
-#!c:/Perl64/bin/perl   
+#!/usr/bin/perl -w
 
 use strict;
 use warnings;
@@ -12,21 +12,18 @@ my $q = CGI->new();
 my $URL  = "https://virtual.mygateglobal.com/PaymentPage.cfm";
 my $Mode = "0";     # 0 = Test Mode. 1 = Live Mode
 
-# Be sure to populate these variables with the ones
-# you generated in the MyGate Developer Center.
-# Go there now by going to http://developer.mygateglobal.com
 my $MerchantID    = "F5785ECF-1EAE-40A0-9D37-93E2E8A4BAB3";
 my $ApplicationID = "C572C9CC-F2C8-4DC8-AC5E-48784B83AB35";
 
 # Currency and price of transaction
-my $Price   = "10.00";
-my $Currency = "USD";
+my $Price   = "0.01";
+my $Currency = "ZAR";
 
 # Redirect Details
-my $RedirectSuccess = "http://localhost:81/QA/PerlSampleCode/processResults.pl";
-my $RedirectFailed  = "http://localhost:81/QA/PerlSampleCode/processResults.pl";
+my $RedirectSuccess = "http://localhost:8888/cgi-bin/Virtual/processResults.pl";
+my $RedirectFailed  = "http://localhost:8888/cgi-bin/Virtual/processResults.pl";
 
-my $MerchantReference  = "MyMerchantRef1";
+my $MerchantReference  = "";
 
 print $q->header(
     -type    => 'text/html',
@@ -45,15 +42,15 @@ print $q->header(
     -action  => $URL,
   ),
   $q->hidden( -name => 'Mode',          -value => $Mode ),          $q->br(),
-  $q->hidden( -name => 'txtMerchantID',    -value => $MerchantID ),    $q->br(),
-  $q->hidden( -name => 'txtApplicationID', -value => $ApplicationID ), $q->br(),
-  $q->hidden( -name => 'txtMerchantReference', -value => $MerchantReference ), $q->br(),
-  $q->hidden( -name => 'txtRedirectSuccessfulURL', -value => $RedirectSuccess ), $q->br(),
-  $q->hidden( -name => 'txtRedirectFailedURL',     -value => $RedirectFailed ),  $q->br(),
-  'Amount: R', $q->textfield( -name => 'txtPrice', -value => $Price ), $q->br(),
-  $q->hidden( -name => 'txtCurrencyCode', -value => $Currency ), $q->br(),
-  $q->hidden( -name => 'txtDisplayPrice', -value => $Price ), $q->br(),
-  $q->hidden( -name => 'txtDisplayCurrencyCode', -value => $Currency ), $q->br(),
+  $q->hidden( -name => 'MerchantID',    -value => $MerchantID ),    $q->br(),
+  $q->hidden( -name => 'ApplicationID', -value => $ApplicationID ), $q->br(),
+  $q->hidden( -name => 'MerchantReference', -value => $MerchantReference ), $q->br(),
+  $q->hidden( -name => 'RedirectSuccessfulURL', -value => $RedirectSuccess ), $q->br(),
+  $q->hidden( -name => 'RedirectFailedURL',     -value => $RedirectFailed ),  $q->br(),
+  'Amount: R', $q->textfield( -name => 'Price', -value => $Price ), $q->br(),
+  $q->hidden( -name => 'CurrencyCode', -value => $Currency ), $q->br(),
+  $q->hidden( -name => 'DisplayPrice', -value => $Price ), $q->br(),
+  $q->hidden( -name => 'DisplayCurrencyCode', -value => $Currency ), $q->br(),
   $q->submit( -name => 'submit', -value => 'Process Transaction' ), $q->br(),
   $q->end_form(),
   $q->end_html();
