@@ -24,7 +24,7 @@ my $now_string = strftime "%Y%m%d_%H%M%S", localtime;
 #		14		ThreeD Secure - Lookup
 #		15		ThreeD Secure - Authenticate
 #		19		Reports
-#       20      Visa Checkout
+#               20              Visa Checkout
  
 my $actionTypeID = '20';
 
@@ -40,7 +40,7 @@ my %replace = (
     '{cvvNumber}'         => '123',
     '{amount}'            => '10.36',
     '{verbalAuthCode}'    => '123456',
-    '{paresPayload}'      => '' );
+    '{callid}'            => '' );
 
 if ($actionTypeID == 1 || $actionTypeID == 5)
 {
@@ -48,11 +48,13 @@ if ($actionTypeID == 1 || $actionTypeID == 5)
     my $tdsAuthenticate = param( "tdsAuthenticate" );
     my $md = param( "MD" );
     my $PaRes = param( "PaRes" );
+    my $callid = param( "callid" );
 
     if (defined ( $tdsAuthenticate ) && defined( $md ) > 0 && defined( $PaRes ) > 0)
     {
         $replace{'{transactionIndex}'} = $md;
         $replace{'{paresPayload}'} = $PaRes;
+	$replace{'{callid}'} = $callid;
 
         my $authResponse = processRequest( $merchantUID, $merchantToken, 15, %replace );
 
