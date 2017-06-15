@@ -99,6 +99,7 @@
             <td><input type='text' style='width: 560' name='transactionIndex' value='<transactionIndex>#responseNodes[ 1 ].uidTransactionIndex.xmlText#</transactionIndex>' /></td></tr>
         <tr><td><div align='left'>paresPayload :</div></td>
             <td><input type='text' style='width: 560' name='paresPayload' value='<paresPayload>#responseNodes[ 1 ].tdsLookup.payload.xmlText#</paresPayload>' /></td></tr>
+	    <td><input type='text' style='width: 560' name='callid' value='<callid>#responseNodes[ 1 ].tdsLookup.callid.xmlText#</callid>' /></td></tr>
         <tr><td><div align='left'>merchantReference :</div></td>
             <td><input type='text' style='width: 560' name='merchReference' value='<merchantReference>123456789012347</merchantReference>' /></td></tr>
         <tr><td><div align='left'>terminal :</div></td>
