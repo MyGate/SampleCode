@@ -20,7 +20,7 @@ try
 	//		14		ThreeD Secure - Lookup
 	//		15		ThreeD Secure - Authenticate
 	//		19		Reports
-	//      20      Visa Checkout
+	//              20              Visa Checkout
 	
 	$actionTypeID = '20';
 	
@@ -36,7 +36,7 @@ try
 			'cvvNumber' => '123',
 			'amount' => '10.36',
 			'verbalAuthCode' => '123456',
-			'paresPayload' => '' );
+			'callid' => '' );
 
 	if ($actionTypeID == 1 || $actionTypeID == 5)
 	{
@@ -44,6 +44,7 @@ try
 		{
 				$replace['transactionIndex'] = $_POST["MD"];
 				$replace['paresPayload'] = $_POST["PaRes"];
+			        $replace['callid'] = $_POST["callid"];
 			
 				$authResponse = processRequest($merchantUID, $merchantToken, 15, $replace);
 				
