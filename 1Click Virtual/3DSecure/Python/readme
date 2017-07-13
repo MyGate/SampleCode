@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+DOCUMENTATION
+--------------------------------------------------------------------------------
+
+This code sample has been successfully tested on the following server
+configurations and performed according to MyGate's documented My Virtual integration method standards.
+  Python 2.7.1 with Virtual ENV, PIP and Flask on Mac OS X 10.7.4
+
+Last updated April 2012
+
+--------------------------------------------------------------------------------
+DISCLAIMER
+--------------------------------------------------------------------------------
+
+WARNING: ANY USE BY YOU OF THE SAMPLE CODE PROVIDED IS AT YOUR OWN RISK
+
+MyGate provides this code "as is" without warranty of any kind, either
+express or implied, including but not limited to the implied warranties of
+suitability and/or fitness for a particular purpose.
+
+This sample code is provided merely as a blueprint demonstrating one possible
+approach to integrating with MyGate using our My Virtual integration
+Method.
+
+This sample code is not a tutorial.  If you are unfamiliar with specific
+programming functions and concepts, please consult the appropriate reference
+materials.
+
+--------------------------------------------------------------------------------
+PREREQUISITES
+--------------------------------------------------------------------------------
+
+- This sample code uses an HTTP POST to establish a connection
+  to the MyGate server.
+
+- It is required that you install the flask framework to run this example.
+  To do this, follow the following steps:
+
+  In Terminal, run the following commands:
+
+  1) sudo easy_install virtualenv
+  2) sudo easy_install pip
+  3) sudo pip install Flask
+
+  Once complete, start the app by typing the following command in Terminal once in the app folder:
+
+  1) python app.py
+
+  You should now be able to browse to http://127.0.0.1:5000/Virtual and see the example post to MyGate.
+
