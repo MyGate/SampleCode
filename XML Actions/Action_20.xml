@@ -3,8 +3,7 @@
 	<applicationUID>{applicationUID}</applicationUID>	<transactionAuth>
 		<visaCheckout>
 			<action>1</action>
-			<payload></payload>
-			<secretKey></secretKey>
+			<callid>1606250703355470501</callid>
 		</visaCheckout>
 	</transactionAuth>
 	<merchantReference>{merchantReference}</merchantReference>
